@@ -13,7 +13,7 @@ type BookType = {
 
 type Catelogue = BookType[];
 
-export async function getData() {
+async function getData() {
   try {
     const response = await fetch("https://freetestapi.com/api/v1/books", {
       next: { revalidate: 200 },
